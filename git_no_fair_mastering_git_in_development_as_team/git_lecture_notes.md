@@ -35,3 +35,29 @@ Created .git directory
     - commit file
 - Index file
 - Config file
+
+- `git rm`
+Remove files both repository and work tree
+- `git rm --cache`
+Remove a file only in repository
+
+- `git mv`
+
+## Git Push
+
+`git remote add origin https://github.com/<User Name>/<Project Name>.git`
+`git branch -M main`
+`git push -u origin main`
+
+## Alias
+
+- `git config --global alias.ci commit`
+- `git config --global alias.st status`
+- `git config --global alias.br branch`
+- `git config --global alias.co checkout`
+
+## .gitignore
+
+- auto generted files
+- files that have sensitive infomation i.e. password
+
