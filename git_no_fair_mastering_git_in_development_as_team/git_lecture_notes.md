@@ -24,3 +24,14 @@
 
 - Save data by creating compressed file, tree and commit files in the repository
 - Be able to see changes that the commit has parent commit
+
+## Commands
+
+- `git init`
+Created .git directory
+- Repository
+    - compressed file
+    - tree file
+    - commit file
+- Index file
+- Config file
