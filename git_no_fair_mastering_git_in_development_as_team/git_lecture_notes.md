@@ -46,8 +46,12 @@ Remove a file only in repository
 ## Git Push
 
 `git remote add origin https://github.com/<User Name>/<Project Name>.git`
+
 `git branch -M main`
+
 `git push -u origin main`
+
+For first time, will be asked user id and token for github
 
 ## Alias
 
