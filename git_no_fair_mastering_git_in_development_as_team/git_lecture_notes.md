@@ -65,3 +65,88 @@ For first time, will be asked user id and token for github
 - auto generted files
 - files that have sensitive infomation i.e. password
 
+## Undo file changes in the work tree
+
+- `git checkout -- <file_name>`
+
+- `git checkout -- .`
+
+- checkout can be used branch, so use `--`
+
+- checkout will copy a file in the stage to the work tree
+
+## Undo file changes in the stage
+
+- `git reset HEAD <file_name>`
+
+- `git reset HEAD .`
+
+- Copy from newest commit in the repository to the stage
+- HEAD is the newest commit in current branch
+so git reset HEAD means reset stage content by the newest commit
+
+## Undo commit
+
+- `git commit --amend`
+should not used `--amend` command a commit that after pushed to remote repository
+
+## Display remote
+
+- `git remote`
+
+- `git remote -v`
+
+## fetch (retrieve data from remote)
+
+- `git fetch <remote_name>`
+- `git fetch origin`
+
+Reflect only local repository, not in the work tree 
+
+- `git merge origin/main`
+To reflect in the work tree
+
+## pull (retrieve data from remote then merge)
+
+- `git pull <remote_name><branch_name>`
+- `git pull origin master`
+- `git pull`
+
+if you are not in main branch then `git pull origin hoge` then hoge branch will be merged to main branch. Should not use pull if not in main branch
+
+## Show remote infomation
+
+- `git remote show <remote_name>`
+- `git remote show origin`
+
+## Rename and delete remote
+
+- `git remote rename <old_remote_name> <new_remote_name>`
+- `git remote rename tutorial new_tutorial`
+
+- `git remote rm <remote_name>`
+- `git remote rm new_tutorial`
+
+## Branch
+
+- branch is pointer for a commit
+- HEAD : pointer for current working branch 
+i.e. `ref: main` working in main branch
+
+- `git branch <branch_name>`
+- `git branch feature`
+only create new branch
+
+- `git branch`
+- `git branch -a`
+show branch
+
+- `git log --oneline --decorate`
+
+- `git checkout <exist_branch_name>`
+- `git checkout feature`
+
+- `git checkout -b <new_branch_name>`
+create new branch then change working branch
+
+*HEAD will be changed
