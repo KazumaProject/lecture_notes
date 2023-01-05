@@ -150,3 +150,27 @@ show branch
 create new branch then change working branch
 
 *HEAD will be changed
+
+## Merge
+
+- `git merge <branch_name>`
+- `git merge <remote_name / branch_name>`
+- `git merge origin/main`
+
+## Conflict
+
+- editing the same file, same line in the same time
+- `git status` will show conflict file as `both modified`
+- modify conflict file
+
+## Change branch name / delete branch
+
+- `git branch -m <branch_name>`
+- `git branch -m new_branch`
+
+- `git branch -d <branch_name>`
+- `git branch -d feature`
+- `git branch -D <branch_name>`
+
+- main branch : release branch
+- development : topic branches
