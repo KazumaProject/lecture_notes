@@ -174,3 +174,105 @@ create new branch then change working branch
 
 - main branch : release branch
 - development : topic branches
+
+## Make work tree file same as repository
+1. `git branch -D main`
+2. `git fetch`
+3. `git branch main origin/main`
+4. `git merge origin/main`
+5. open conflict files
+`<<<<< HEAD`
+`>>>>> origin/main`
+6. `git add .`
+7. `git commit`
+8. `git push origin/<branch_name>`
+
+## GitHub Flow
+
+1. make new branch from `main`
+2. change files then commit
+3. Push the same name branch to GitHub
+4. Send pull request
+5. Code review then merge to `main`
+6. Deploy `main`
+
+## Rebase
+
+- `git rebase <branch_name>`
+- Do not rebase a commit that has been already pushed to GitHub
+- `git push -f` is NG after rebase pushed commit
+
+## pull merge type
+- `git pull origin main`
+    1. `git fetch`
+    2. `git merge`
+
+## pull rebase type
+- `git pull --rebase origin main`
+    1. `git fetch`
+    2. `git rebase`
+recommend when get the newest files or just get files from repository
+
+## fast forward disable
+- `git config --global merge.ff false`
+
+## Setup pull as rebase type
+- `git config --global pull.rebase true`
+- `git config branch.main.rebase true`
+
+## Undo multiple commits
+- `git rebase -i HEAD~3` 
+    1. change pick to edit for a commit that want to change
+    2. change files then `git commit --amend`
+    3. `git rebase --continue`
+
+## Sort, delete commit
+- `git rebase -i HEAD~3`
+    1. delete or sort lines `pick 18u38e test commit`
+
+## Merge commits
+- `git rebase -i HEAD~3`
+    1. change pick to squash 
+    `pick 2djaks7` edit header`
+    `squash 1930543 added file`
+    `squash sdhk4d` edit README`
+
+## Separate commits
+- `git rebase -i HEAD~3`
+    1. change pick to edit
+    2. `git reset HEAD^`
+    3. `git commit -m "edit README"`
+    4. `git add index.html`
+    5. `git commit -m "edit index"`
+    6. `git rebase --continue`
+
+## Create tag
+annotated
+- `git tag -a 20170520_01 -m "version 20170520_01"` 
+light
+- `git tag 20170520_01` 
+- `git tag [tag_name] [commit_name]`
+- `git show [tag_name]`
+
+## Send tag to remote
+- `git push [remote_name] [tag_name]`
+- `git push origin 20230106`
+- `git push origin --tags`
+
+## 一時避難
+- `git stash`
+- `git stash save`
+
+show stash list
+- `git stash list`
+
+restore stash file
+- `git stash apply`
+restore the stage
+- `git stash apply --index`
+- `git stash apply [stash_name]`
+delete stash
+- `git stash drop`
+- `git stash drop [stash_name]`
+delete all files in stash
+- `git stash clear` 
