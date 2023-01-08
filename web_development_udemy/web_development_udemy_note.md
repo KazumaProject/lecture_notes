@@ -12,6 +12,7 @@
 - [属性のリファレンス](https://developer.mozilla.org/ja/docs/Web/HTML/Attributes)
 ## link
 - `rel="noopener"`, `target="_blank"`
+
 [説明文](https://developer.chrome.com/ja/docs/lighthouse/best-practices/external-anchors-use-rel-noopener/`)
 ## 文字実体参照
 - 著作権 `&copy;`
