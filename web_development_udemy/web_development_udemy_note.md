@@ -49,3 +49,9 @@
 | margin        | marginを調整  |
 | padding       | paddingを調整 |
 | border        | borderを調整  |
+| width         | 横幅の調整    |
+| min-width     | 横幅の最小値を調整 |
+| max-width     | 横幅の最大値を調整 |
+| height        | 高さの調整    |
+| min-height    | 高さの最小値を調整 |
+| max-height    | 高さの最大値を調整 |
