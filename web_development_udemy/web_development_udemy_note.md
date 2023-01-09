@@ -42,6 +42,9 @@
     2. 内部参照
     3. 外部参照
 
+<details>
+    <summary>/summary>
+</details>
 - ボックスモデルを調整できるプロパティ
 
 | プロパティ    |               |
@@ -65,3 +68,14 @@
 | 子セレクタ           | >             | p > strong | pの1つ下の階層のstrong        |
 | 隣接セレクタ         | +             | h2 + p     | h2の直後の記述した同じ階層のp |
 | 間接セレクタ         | ~             | h1 ~ p     | h1の後に記述した全ての階層のp |
+
+- link
+    1. `a:link` 未訪問のリンク
+    2. `a:visited` 訪問済みのリンク
+    3. `a:hover` ホバー状態のリンク
+    4. `a:active` クリック状態のリンク
+
+- font
+    - `selector {
+    font-family: <font_name> or <font_family>
+    }`
