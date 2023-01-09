@@ -30,3 +30,22 @@
 ## divとspan
 - div: block要素で改行される
 - span: inline要素で改行されない
+
+## Form
+- `<form action="<path_to_send_data_in_server>" method="<http_request> > </form>"`
+[http_request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+- `<label for="">`と`<input id="">`を揃えるとlabelをクリックするとinputにfocusされる
+
+## CSS
+- 優先順位
+    1. インライン
+    2. 内部参照
+    3. 外部参照
+
+- ボックスモデルを調整できるプロパティ
+
+| プロパティ    |               |
+| :-----------  | :-------------|
+| margin        | marginを調整  |
+| padding       | paddingを調整 |
+| border        | borderを調整  |
