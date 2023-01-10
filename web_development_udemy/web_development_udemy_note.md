@@ -118,7 +118,10 @@
     - space-around
 
 - `flex-flow`
-    - `flex-flow: <flex_direction> <flex-wrap>`
+```css
+flex-flow: <flex_direction> <flex-wrap>`
+```
+
 
 ## Grid
 ```css
