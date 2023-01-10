@@ -82,32 +82,32 @@
 
 ## Flexbox
 - `div.<_class_name>{item}`
-- `display: flex;`
-- `flex-direction: <direction>;`
-    - row
-    - row-reverse
-    - column
-    - column-reverse
 
-- `flex-wrap`
-    - nowrap
-    - wrap
-    - wrap-reverse
+```css
+display: flex;
+```
 
-- `justify-content`
-    - flex-start
-    - flex-end
-    - center
-    - space-between
-    - space-around
-    - space-evenly
+```css
+flex-direction: row;
+flex-direction: row-reverse;
+flex-direction: column;
+flex-direction: column-reverse;
+```
 
-- `align-items`
-    - stretch
-    - flex-start
-    - flex-end
-    - center
-    - baseline
+```css
+flex-wrap: nowrap;
+flex-wrap: wrap;
+flex-wrap: wrap-reverse;
+```
+
+```css
+justify-content: flex-start;
+justify-content: flex-end;
+justify-content: center;
+justify-content: space-between;
+justify-content: space-around;
+justify-content: space-evenly;
+```
 
 ```css
 aligh-items: stretch;
@@ -128,12 +128,17 @@ align-content: space-around;
 
 ```css
 flex-flow: <flex_direction> <flex-wrap>;
+flex-flow: row wrap;
 ```
 
 
 ## Grid
+
 ```css
 display: grid;
+```
+
+```css
 grid-template-columns: 1fr 1fr 1fr;
 grid-template-columns: 200px 200px 200px;
 ```
