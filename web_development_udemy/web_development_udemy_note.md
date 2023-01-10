@@ -155,3 +155,8 @@ grid-template-columns: 1fr 1fr 1fr;
 grid-template-columns: repeat(3, 1fr);
 ```
 
+## minmax関数
+```css
+grid-template-columns: repeat(3, minmax(240px, 1fr));
+```
+
