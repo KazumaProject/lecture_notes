@@ -76,9 +76,11 @@
     4. `a:active` クリック状態のリンク
 
 - font
-    - `selector {
-    font-family: <font_name> or <font_family>
-    }`
+```css
+ selector {
+    font-family: <font_name> or <font_family>;
+    }
+```
 
 ## Flexbox
 - `div.<_class_name>{item}`
