@@ -109,17 +109,25 @@
     - center
     - baseline
 
-- `align-content`
-    - stretch
-    - flex-start
-    - flex-end
-    - center
-    - space-between
-    - space-around
-
-- `flex-flow`
 ```css
-flex-flow: <flex_direction> <flex-wrap>`
+aligh-items: stretch;
+aligh-items: flex-start;
+aligh-items: flex-end;
+aligh-items: center;
+aligh-items: baseline;
+```
+
+```css
+align-content: stretch;
+align-content: flex-start;
+align-content: flex-end;
+align-content: center;
+align-content: space-between;
+align-content: space-around;
+```
+
+```css
+flex-flow: <flex_direction> <flex-wrap>;
 ```
 
 
