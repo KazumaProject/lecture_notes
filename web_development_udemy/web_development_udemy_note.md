@@ -33,8 +33,9 @@
 
 ## Form
 - `<form action="<path_to_send_data_in_server>" method="<http_request> > </form>"`
-<br>
-[http_request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
+[http request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
 - `<label for="">`と`<input id="">`を揃えるとlabelをクリックするとinputにfocusされる
 
 ## CSS
