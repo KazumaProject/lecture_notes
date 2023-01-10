@@ -123,7 +123,7 @@
 ## Grid
 ```css
 display: grid;
-grid-template-columns: 1fr 1fr 1fr
+grid-template-columns: 1fr 1fr 1fr;
 grid-template-columns: 200px 200px 200px;
 ```
 
