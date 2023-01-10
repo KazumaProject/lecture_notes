@@ -46,7 +46,6 @@
 
 <details>
     <summary> ボックスモデルを調整できるプロパティ</summary>
-    <div>
 | プロパティ    |               |
 | :-----------  | :-------------|
 | margin        | marginを調整  |
@@ -58,7 +57,6 @@
 | height        | 高さの調整    |
 | min-height    | 高さの最小値を調整 |
 | max-height    | 高さの最大値を調整 |
-    </div>
 </details>
 
 - 結合子を使ったセレクタの種類
