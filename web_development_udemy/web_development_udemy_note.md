@@ -121,13 +121,11 @@
     - `flex-flow: <flex_direction> <flex-wrap>`
 
 ## Grid
-- `display: grid;`
-    - `grid-template-columns: 200px 200px 200px;`
-    - `grid-template-columns: 1fr 1fr 1fr;`
-    - `grid-template-columns: 1fr 1fr 1fr;`
-    - `gap: 16px;`
-
-    - `grid-template-columns: 1fr 1fr 1fr;`
+```css
+display: grid;
+grid-template-columns: 1fr 1fr 1fr
+grid-template-columns: 200px 200px 200px;
+```
 
 ## repeat関数
 ```css
