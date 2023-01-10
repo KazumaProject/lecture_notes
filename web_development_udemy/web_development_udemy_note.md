@@ -79,3 +79,61 @@
     - `selector {
     font-family: <font_name> or <font_family>
     }`
+
+## Flexbox
+- `div.<_class_name>{item}`
+- `display: flex;`
+- `flex-direction: <direction>;`
+    - row
+    - row-reverse
+    - column
+    - column-reverse
+
+- `flex-wrap`
+    - nowrap
+    - wrap
+    - wrap-reverse
+
+- `justify-content`
+    - flex-start
+    - flex-end
+    - center
+    - space-between
+    - space-around
+    - space-evenly
+
+- `align-items`
+    - stretch
+    - flex-start
+    - flex-end
+    - center
+    - baseline
+
+- `align-content`
+    - stretch
+    - flex-start
+    - flex-end
+    - center
+    - space-between
+    - space-around
+
+- `flex-flow`
+    - `flex-flow: <flex_direction> <flex-wrap>`
+
+## Grid
+- `display: grid;`
+    - `grid-template-columns: 200px 200px 200px;`
+    - `grid-template-columns: 1fr 1fr 1fr;`
+    - `grid-template-columns: 1fr 1fr 1fr;`
+    - `gap: 16px;`
+
+    - `grid-template-columns: 1fr 1fr 1fr;`
+
+## repeat関数
+```css
+grid-template-columns: 1fr 1fr 1fr;
+```
+```css
+grid-template-columns: repeat(3, 1fr);
+```
+
