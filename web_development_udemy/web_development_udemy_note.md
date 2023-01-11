@@ -282,3 +282,13 @@ input, select {
 ```html
 <img src="https://via.placeholder.com/3000x2500">
 ```
+
+```css
+#info dt {
+  width: 7em;
+}
+
+#info dd {
+  width: calc(100% - 7em);
+}
+```
