@@ -168,9 +168,9 @@ grid-template-columns: repeat(3, minmax(240px, 1fr));
 [css reset](http://html5doctor.com/html-5-reset-stylesheet/)
 
 <details>
-    <summary> html5 css reset</summary>
+    <summary>html5reset-1.6.1.css</summary>
 
-```css:html5reset-1.6.1.css
+```css
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -276,3 +276,9 @@ input, select {
 ``` 
 
 </details>
+
+[dammy image place holder](https://placeholder.com/)
+
+```html
+<img src="https://via.placeholder.com/3000x2500">
+```
