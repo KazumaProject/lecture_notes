@@ -170,8 +170,8 @@ grid-template-columns: repeat(3, minmax(240px, 1fr));
 <details>
     <summary> html5 css reset</summary>
 
-    <div>
     ```css:html5reset-1.6.1.css
+
 /*
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -276,6 +276,5 @@ input, select {
 }
 
     ``` 
-    </div>
 
 </details>
