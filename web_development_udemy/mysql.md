@@ -19,3 +19,15 @@ show variables like '%char%';
 ```sql
 show databases;
 ```
+
+- データベースの作成,削除
+```sql
+create database <database_name>;
+drop database <database_name>;
+```
+
+- 選択されているデータベースの表示と選択
+```sql
+select database();
+use <database_name>;
+```
