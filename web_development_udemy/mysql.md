@@ -31,3 +31,8 @@ drop database <database_name>;
 select database();
 use <database_name>;
 ```
+
+##　参考にした記事
+- [MacbookにRubyをインストール](https://qiita.com/yamato1491038/items/ae95114b9f25c4a10cf0)
+
+- [Macでmysqlを扱う方法](https://qiita.com/fuwamaki/items/194c2a82bd6865f26045)
