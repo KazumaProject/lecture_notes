@@ -61,8 +61,82 @@ grant all on mydb.* to mydbuser@localhost identified by '1111';
 ```sql
 create table users (id int unsigned, name varchar(32), age int);
 drop table users;
+``
+
+## データ型
+1. 数値型
+	- int
+	 整数 -2147483648 ~ 2147483647
+	- tinyint 
+	 -128 ~ 127
+	- float
+	- double
+
+- int unsigned
+正の値のみ
+
+- tinyint(1)
+
+2. 文字列
+	- char
+	固定長の文字列255文字まで
+	 i.e. 商品コードで５桁固定
+	- varchar, char(5)
+	可変長も文字列255文字まで
+	i.e. email, varchar(255)
+	- text
+	65535文字まで
+
+3. 日付、時刻型
+	- date
+	- datetime
+	- time
+
+- データの挿入
+```sql
+insert into users(id, name, age) values (1, 'sato', '20')
 ```
 
+- auto_increment
+- not null
+- PRIMARY KEY
+
+```sql
+create table users (id int unsigned auto_increment not null primary key, name varchar(32), age int not null);
+```
+
+```sql
+create table users (id int unsigned auto_increment not null primary key,
+    -> name varchar(32),
+    -> age int not null default 1);
+```
+
+- 値の取得
+```sql
+select * from users;
+select name from users;
+select * from users where age >= 20
+```
+
+```sql:名前がsから始まる
+select * from users where name like 's%';
+```
+
+```sql:aを含む
+ select * from users where name like '%a%';
+```
+
+```sql:aでおわる
+ select * from users where name like '%a';
+```
+
+```sql:6文字
+select * from users where name like '______';
+```
+
+```sql:2文字目がa
+select * from users where name like '_a%';
+```
 
 ## 参考にした記事
 - [MacbookにRubyをインストール](https://qiita.com/yamato1491038/items/ae95114b9f25c4a10cf0)
