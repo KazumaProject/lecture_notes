@@ -61,7 +61,7 @@ grant all on mydb.* to mydbuser@localhost identified by '1111';
 ```sql
 create table users (id int unsigned, name varchar(32), age int);
 drop table users;
-``
+```
 
 ## データ型
 1. 数値型
