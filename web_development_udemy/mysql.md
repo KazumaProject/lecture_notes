@@ -57,6 +57,13 @@ create database mydb;
 grant all on mydb.* to mydbuser@localhost identified by '1111';
 ```
 
+- テーブルの作成、削除
+```sql
+create table users (id int unsigned, name varchar(32), age int);
+drop table users;
+```
+
+
 ## 参考にした記事
 - [MacbookにRubyをインストール](https://qiita.com/yamato1491038/items/ae95114b9f25c4a10cf0)
 
