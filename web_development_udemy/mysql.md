@@ -143,6 +143,30 @@ select * from users where name like '______';
 select * from users where name like '_a%';
 ```
 
+- 並び替え
+```sql
+select * from users order by age asc;
+select * from users order by age desc;
+```
+
+- 制限
+```sql
+select * from users limit 3;
+select * from users order by age asc limit 3;
+select * from users where age is not null  order by age asc limit 3;
+select * from users where age is not null  order by age asc limit 3 offset 3;
+```
+
+- Update
+```sql
+update users set age = 40 where id = 1;
+```
+
+- Delete
+```sql
+delete from users where id =1 ;
+```
+
 ## 参考にした記事
 - [MacbookにRubyをインストール](https://qiita.com/yamato1491038/items/ae95114b9f25c4a10cf0)
 
