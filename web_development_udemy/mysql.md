@@ -118,23 +118,28 @@ select name from users;
 select * from users where age >= 20
 ```
 
-```sql:名前がsから始まる
+- 名前がsから始まる
+```sql:
 select * from users where name like 's%';
 ```
 
-```sql:aを含む
+- aを含む
+```sql:
  select * from users where name like '%a%';
 ```
 
-```sql:aでおわる
+- aでおわる
+```sql:
  select * from users where name like '%a';
 ```
 
-```sql:6文字
+- 6文字
+```sql:
 select * from users where name like '______';
 ```
 
-```sql:2文字目がa
+- 2文字目がa
+```sql:
 select * from users where name like '_a%';
 ```
 
