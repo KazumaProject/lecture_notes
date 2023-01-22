@@ -53,4 +53,9 @@ docker dettach
 ```bash
 docker attach <CONTAINER_ID>
 ```
-	 
+
+## Create Docker image from container
+```bash
+docker commit <CONTAINER_ID> <NEW_IMAGE_NAME>
+docker commit <CONTAINER_ID> ununtu:updated
+```
