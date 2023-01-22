@@ -45,13 +45,13 @@ docker dettach
 
 ## come back to the container
 	- exit
-	```bash
-	 docker restart <CONTAINER_ID>
-	 docker exec -it <CONTAINER_ID> bash
-	```
+	 ```bash
+	  docker restart <CONTAINER_ID>
+	  docker exec -it <CONTAINER_ID> bash
+	 ```
 
 	- detach
-	```bash
-	 docker attach <CONTAINER_ID>
-	```
+	 ```bash
+	  docker attach <CONTAINER_ID>
+	 ```
 	 
