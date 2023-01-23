@@ -98,3 +98,20 @@ defaultのcommandは`docker ps -a`の`COMMAND`
 > -i : インプット可能
 >
 > -t : 表示が綺麗になる
+
+## containerを削除する
+```bash
+docker rm <CONTAINER_ID>
+docker rm <NAME>
+```
+
+## containerをstopする
+```bash
+docker stop <CONTAINER_ID>
+docker stop <NAME>
+```
+
+## 止まっているcontainerを全削除
+```bash
+docker system prune
+```
