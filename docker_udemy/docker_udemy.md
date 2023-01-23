@@ -96,4 +96,5 @@ defaultのcommandは`docker ps -a`の`COMMAND`
 
 ## docker run -it
 > -i : インプット可能
+>
 > -t : 表示が綺麗になる
