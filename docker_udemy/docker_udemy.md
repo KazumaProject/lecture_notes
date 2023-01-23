@@ -1,5 +1,7 @@
 # Notes of Docker Udemy
 
+## Section4
+
 ## 環境変数
 ```bash
 export AGE=20
@@ -80,3 +82,18 @@ docker rmi <DOCKER_HUB_USER_NAME>/my-first-repo
 ```bash
 docker run -it <DOCKER_HUB_USER_NAME>/my-first-repo bash
 ```
+
+## Section 5
+
+## `docker run`は`docker create` + `docker start`
+
+## `docker start`ではdefaultの実行結果を見ることができない
+実行結果をみるには
+```bash
+docker start <CONTAINER_ID> -a
+```
+defaultのcommandは`docker ps -a`の`COMMAND`
+
+## docker run -it
+> -i : インプット可能
+> -t : 表示が綺麗になる
