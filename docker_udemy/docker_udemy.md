@@ -6,22 +6,22 @@ export AGE=20
 echo $AGE
 ```
 
-## hello world project
+## hello world projectをpullする
 ```bash
 docker pull hello-world
 ```
 
-## show docker images
+## docker imagesを表示
 ```bash
 docker images
 ```
 
-## create docker container from image
+## containerをimageから作成する
 ```bash
 docker run hello-world
 ```
 
-## show docker containers
+## docker containersを表示
 ```bash
 docker ps
 docker ps -a
@@ -37,13 +37,13 @@ docker restart <CONTAINER_ID>
 docker exec -it <CONTAINER_ID> bash
 ```
 
-## out from container
+## Containerから出る
 ```bash
 exit
 docker dettach
 ```
 
-## come back to the container
+## Containerを再度起動する
 - exit
 ```bash
  docker restart <CONTAINER_ID>
@@ -54,8 +54,20 @@ docker dettach
 docker attach <CONTAINER_ID>
 ```
 
-## Create Docker image from container
+## 更新内容をDocker imageにする
 ```bash
 docker commit <CONTAINER_ID> <NEW_IMAGE_NAME>
-docker commit <CONTAINER_ID> ununtu:updated
+docker commit <CONTAINER_ID> ubuntu:updated
 ```
+
+## Docker imageを別名で保存
+```bash
+docker tag <SOURCE> <TARGET>
+docker tag ubuntu:updated <DOCKER_HUB_USER_NAME>/my-first-repo
+```
+
+## Docker Hubに imageをpushする
+```bash
+docker push <REPOSITORY_NAME>
+```
+
