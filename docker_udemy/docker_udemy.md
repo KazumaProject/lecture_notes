@@ -71,3 +71,12 @@ docker tag ubuntu:updated <DOCKER_HUB_USER_NAME>/my-first-repo
 docker push <REPOSITORY_NAME>
 ```
 
+## dockerのimageを削除する
+```bash
+docker rmi <DOCKER_HUB_USER_NAME>/my-first-repo
+```
+
+## pullしたimageからcontainerを起動する
+```bash
+docker run -it <DOCKER_HUB_USER_NAME>/my-first-repo bash
+```
