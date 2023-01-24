@@ -115,3 +115,15 @@ docker stop <NAME>
 ```bash
 docker system prune
 ```
+
+## コンテナ名を指名してrunする
+```bash
+docker run --name <NAME> <IMAGE>
+```
+
+## container 起動後にdetachする(backgroundで動かす)
+```bash
+docker run -d <IMAGE>
+```
+
+## containerをexin後に削除する(一回きりのcontainer)
