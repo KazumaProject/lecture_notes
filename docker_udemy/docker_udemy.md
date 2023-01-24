@@ -127,7 +127,7 @@ docker run -d <IMAGE>
 docker run -it -d ubuntu bash
 ```
 
-## containerをexin後に削除する(一回きりのcontainer)
+## containerをexit後に削除する(一回きりのcontainer)
 ```bash
 docker run --rm <IMAGE>
 docker run --rm hello-world
