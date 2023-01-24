@@ -212,14 +212,30 @@ nginx
 RUN apt-get install -y cvs
 ```
 
+最終的
 ```Dockerfile
 FROM ubuntu:latest
-RUN apt-get update
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
 curl \
 cvs \
 nginx
 ```
 
+## CMD
+- containerのdefaultのcommandを指定
+```Dockerfile
+CMD["executable", "parames1", "parames2"]
+```
+- 原則Dockerfileの最後に記述
+- CMDは1つのみ
 
+ubuntuの`/bin/bash`はDockerfileのCMDで定義されている
+```Dockerfile
+CMD ["bash"]
+```
+
+## RUNとCMDの違い
+- RUNはLayerを作る,CMDは作らない
+- 保存したい内容: RUN
+- `docker run`で起動するときに実行したい場合: CMD
 </details>
