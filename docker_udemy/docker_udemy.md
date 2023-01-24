@@ -86,7 +86,8 @@ docker run -it <DOCKER_HUB_USER_NAME>/my-first-repo bash
 
 </details>
 
-## Section 5
+<details>
+<summary> Section 5 </summary>
 
 ## `docker run`は`docker create` + `docker start`
 
@@ -135,3 +136,5 @@ docker run -it -d ubuntu bash
 docker run --rm <IMAGE>
 docker run --rm hello-world
 ```
+
+</details>
