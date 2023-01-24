@@ -1,6 +1,7 @@
 # Notes of Docker Udemy
 
 <details>
+
 <summary>Section4</summary>
 
 ## 環境変数
@@ -140,6 +141,7 @@ docker run --rm hello-world
 </details>
 
 <details>
+
 <summary> Section 6 DockerFileについて知ろう</summary>
 
 ## Dockerfileとは
@@ -166,5 +168,58 @@ docker build -t new-ubuntu:latest .
 ```bash
 docker images -f dangling=true
 ```
+
+</details>
+
+<details>
+
+<summary> Section 7 - Docekrfileの書き方 </summary>
+
+## FROM
+Dockerfileは`FROM`から書き始める
+`FROM`はほとんどの場合OSを指定
+
+## RUN
+- Linuxコマンドを実行
+- RUNを使うことで好きにカスタマイズ
+- RUN毎にLayerが作られる
+
+## Layer数を最小限にするために
+- Docker imageのLayer数は最小限にする
+- Layerを作るのは`RUN`, `COPY`, `ADD`
+- コマンドを&&でつなげる
+- \ で改行する
+
+```Dockerfile
+FROM ubuntu:latest
+RUN apt-get update && apt-get install \
+xxx \
+xyz \
+yyy \
+zzz
+```
+
+## cacheの使用
+- cacheはLayerごとに保存される
+- cacheを使用してDockerfileを作成して最終的に&&でつなげる
+
+```Dockerfile
+FROM ubuntu:latest
+RUN apt-get update
+RUN apt-get install -y \
+curl \
+nginx
+RUN apt-get install -y cvs
+```
+
+```Dockerfile
+FROM ubuntu:latest
+RUN apt-get update
+RUN apt-get install -y \
+curl \
+cvs \
+nginx
+```
+
 
 </details>
