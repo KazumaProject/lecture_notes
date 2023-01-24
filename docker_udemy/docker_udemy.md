@@ -1,6 +1,6 @@
 # Notes of Docker Udemy
 
-<detail>
+<details>
 <summary>Section4</summary>
 
 ## 環境変数
@@ -84,7 +84,7 @@ docker rmi <DOCKER_HUB_USER_NAME>/my-first-repo
 docker run -it <DOCKER_HUB_USER_NAME>/my-first-repo bash
 ```
 
-</detail>
+</details>
 
 ## Section 5
 
