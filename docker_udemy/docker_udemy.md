@@ -236,6 +236,6 @@ CMD ["bash"]
 
 ## RUNとCMDの違い
 - RUNはLayerを作る,CMDは作らない
-- 保存したい内容: RUN
-- `docker run`で起動するときに実行したい場合: CMD
+- 保存したい内容: `RUN`
+- `docker run`で起動するときに実行したい場合: `CMD`
 </details>
