@@ -89,7 +89,7 @@ docker run -it <DOCKER_HUB_USER_NAME>/my-first-repo bash
 <details>
 <summary> Section 5 </summary>
 
-## `docker run`は`docker create` + `docker start`
+## docker runはdocker create + docker start
 
 ## `docker start`ではdefaultの実行結果を見ることができない
 実行結果をみるには
@@ -135,6 +135,36 @@ docker run -it -d ubuntu bash
 ```bash
 docker run --rm <IMAGE>
 docker run --rm hello-world
+```
+
+</details>
+
+<details>
+<summary> Section 6 DockerFileについて知ろう</summary>
+
+## Dockerfileとは
+- Docker imageの設計図でDockerfileからDocker imageを作る
+- Dockerfileというファイル名のテキストファイル
+- INSTRUCTION argumentsの形で記載していく
+
+```Dockerfile
+FROM ubuntu:latest
+# testファイルを作成
+RUN touch test
+```
+
+## DockerfileからDocker imageを作成する
+```bash
+docker build <DIRECTORY>
+docker build .
+
+docker build -t <NAME> <DIRECTORY>
+docker build -t new-ubuntu:latest .
+```
+
+- danglingを表示する
+```bash
+docker images -f dangling=true
 ```
 
 </details>
