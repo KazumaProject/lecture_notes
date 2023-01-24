@@ -127,3 +127,6 @@ docker run -d <IMAGE>
 ```
 
 ## containerをexin後に削除する(一回きりのcontainer)
+```bash
+docker run --rm <IMAGE>
+```
