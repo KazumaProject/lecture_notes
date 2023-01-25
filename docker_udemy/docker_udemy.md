@@ -247,9 +247,102 @@ CMD ["bash"]
 - docker deamonがある場所を`DOCKER_HOST`と呼びclientから命令を出す
 - docker objectsを管理するもの
 > docker objects
-> - newwork
+> - network
 > - container
 > - image
 > - data volumes
+
+## COPY
+hostからcontainerにcopyする
+```Dockerfile
+COPY <src> <dest>
+
+FROM ubuntu:latest
+RUN mkdir /new_dir
+COPY something /new_dir/
+```
+
+## COPY vs ADD
+- 単純にfileやfolderをcopyする場合は`COPY`
+- tarの圧縮ファイルをコピーして解凍したいときは`ADD`
+
+```bash
+tar -cvf compressed.tar sample_folder
+```
+
+## Dockerfileがbuild contextにない場合
+```bash
+docker build -f <docker_file_name> <build_context>
+```
+`Dockerfile.dev`
+
+`Dockerfile.test`
+
+```bash
+docker build -f ../Dockerfile.dev .
+```
+
+## CMD vs ENTRYPOINT
+- ENTRYPOINTでもdefaultのcommandを指定することができる
+> - ENTRYPOINTは,run時に上書きできない
+> - ENTRYPOINTがある場合はCMDは["param1", "param2"]の形を取る
+> つまりCMDはENTRYPOINTの引数となる
+> - run時に上書きできるのはCMDの部分のみ
+> - containerをcommandのようにして使いたい時に使う
+
+```Dockerfile
+FROM ubuntu:latest
+RUN touch test
+CMD ["ls","--help"]
+```
+
+```Dockerfile
+FROM ubuntu:latest
+RUN touch test
+ENTRYPOINT["ls"]
+CMD["--help"]
+```
+
+## ENV :環境変数を設定する
+
+```Dockerfile
+ENV <key> <value>
+ENV <key>=<value> ...
+```
+
+```Dockerfile
+FROM ubuntu:latest
+ENV key1 this_is_value1
+ENV key2=this_is_value2
+ENV key3="H e l l o , W o r l d !" key4=j\ o\ h\ n
+ENV key5 v a l u e
+```
+
+全ての環境変数を表示する
+```bash
+env
+```
+
+## WORKDIR
+Docker instructionの実行directoryを変更する
+
+- Docker instructionはrootで実行される
+
+```Dockerfile
+FROM ubuntu:latest
+RUN mkdir sample_folder
+RUN cd sample_folder
+RUN touch sample_file
+```
+sample_fileはroot下に作られる
+
+```Dockerfile
+FROM ubuntu:latest
+# RUN mkdir sample_folder
+WORKDIR /sample_folder
+RUN touch sample_file
+```
+sample_fileはsample_folder下に作られる
+runした際にsample_folderに移動されている
 
 </details>
