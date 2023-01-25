@@ -286,6 +286,7 @@ docker build -f ../Dockerfile.dev .
 - ENTRYPOINTでもdefaultのcommandを指定することができる
 > - ENTRYPOINTは,run時に上書きできない
 > - ENTRYPOINTがある場合はCMDは["param1", "param2"]の形を取る
+>
 > つまりCMDはENTRYPOINTの引数となる
 > - run時に上書きできるのはCMDの部分のみ
 > - containerをcommandのようにして使いたい時に使う
