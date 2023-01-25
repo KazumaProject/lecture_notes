@@ -239,3 +239,17 @@ CMD ["bash"]
 - 保存したい内容: `RUN`
 - `docker run`で起動するときに実行したい場合: `CMD`
 </details>
+
+<details>
+<summary> Section 8 - docker buildの詳細と、その他のInstruction</summary>
+
+## Docker deamonとは
+- docker deamonがある場所を`DOCKER_HOST`と呼びclientから命令を出す
+- docker objectsを管理するもの
+> docker objects
+> - newwork
+> - container
+> - image
+> - data volumes
+
+</details>
