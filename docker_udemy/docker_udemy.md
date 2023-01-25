@@ -300,8 +300,8 @@ CMD ["ls","--help"]
 ```Dockerfile
 FROM ubuntu:latest
 RUN touch test
-ENTRYPOINT["ls"]
-CMD["--help"]
+ENTRYPOINT ["ls"]
+CMD ["--help"]
 ```
 
 ## ENV :環境変数を設定する
