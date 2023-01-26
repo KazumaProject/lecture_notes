@@ -354,7 +354,7 @@ runした際にsample_folderに移動されている
 
 ## -vオプションでファイルシステムを共有する
 
-> -v <host> : <container>
+> -v < host >:< container >
 
 ```bash
 docker run -it -v ~/Documents/docker_projects/mounted_folder:/new_dir <image> bash
@@ -367,7 +367,7 @@ mountされたhostのファイルはhost内にある。container内には無い�
 
 ## -uオプションでホストとコンテナのアクセス権限を共有する
 
-> -u <user_id> : <group_id>
+> -u <user_id>:<group_id>
 
 ```bash
 docker run -it -u $(id -u):$(id -g) -v ~/Documents/docker_projects/mounted_folder:/created_in_run <image> bash
