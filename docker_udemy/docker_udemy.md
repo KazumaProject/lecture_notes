@@ -397,4 +397,39 @@ docker run -it -p 1234:8888 --rm jupyter/datascience-notebook bash
 ```
 browserからlocalhost:1234
 
+## containerで使えるコンピュータリソースの上限を設定する
+> --cpus <# of CPUs> : コンテナがアクセスできる上限のCPUを設定
+>
+> --memory < byte > : コンテナがアクセスできる上限のメモリを設定
+
+macでCPU,メモリの確認
+```bash
+sysctl -n hw.physicalcpu_max #物理コア数 
+sysctl -n hw.logicalcpu_max #論理コア数
+sysctl hw.memsize #メモリ(byte)
+```
+
+```bash
+docker inspect <container_id>
+docker inspect <container_id> | grep -i cpu
+docker inspect <container_id> | grep -i memory
+```
+
+</details>
+
+<details>
+<summary> Section 10 応用編1-1 </summary>
+
+```bash
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y \
+    sudo \
+    wget \
+    vim
+WORKDIR /opt
+RUN wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
+CMD ["jupyter lab"]
+```
+
+
 </details>
