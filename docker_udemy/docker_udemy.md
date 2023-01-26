@@ -420,6 +420,12 @@ docker inspect <container_id> | grep -i memory
 <details>
 <summary> Section 10 応用編1-1 </summary>
 
+## Dockerでデータサイエンスの解析環境を構築する
+1. build contextは`dsenv_build` folder
+2. containerはubuntuでAnacondaとJupyter labをインストールする
+3. Hostのbuild context内のcodeをcontainerにmountしてファイルシステムを共有する
+4. Hostのportとcontainerのportを`8888`でつなげる
+
 ```bash
 FROM ubuntu:latest
 RUN apt-get update && apt-get install -y \
