@@ -347,3 +347,54 @@ sample_fileはsample_folder下に作られる
 runした際にsample_folderに移動されている
 
 </details>
+
+<details>
+
+<summary> Section 9 ホストとコンテナの関係を理解する </summary>
+
+## `-v`オプションでファイルシステムを共有する
+
+> -v <host>:<container>
+
+```bash
+docker run -it -v ~/Documents/docker_projects/mounted_folder:/new_dir <image> bash
+
+docker_projects % docker run -it -v ~/Documents/docker_projects/mounted_folder:/new_dir 0fd6b702080e1f5fdd222e bash
+```
+
+mountされたhostのファイルはhost内にある。container内には無い。
+-vで指定するfolderがcontainer無いにない場合、自動的に作られる
+
+## `-u`オプションでホストとコンテナのアクセス権限を共有する
+
+> -u <user id>:<group id>
+
+```bash
+docker run -it -u $(id -u):$(id -g) -v ~/Documents/docker_projects/mounted_folder:/created_in_run <image> bash
+```
+
+- User IDを表示
+```bash
+id -u
+```
+
+- Group IDを表示
+```bash
+id -g
+```
+
+## `-p`オプションでホストとコンテナのポートを繋げる
+
+> -p <host_port>:<container_port>
+
+```bash
+docker run -it -p 8888:8888 --rm jupyter/datascience-notebook bash
+```
+browserからlocalhost:8888
+
+```bash
+docker run -it -p 1234:8888 --rm jupyter/datascience-notebook bash
+```
+browserからlocalhost:1234
+
+</details>
