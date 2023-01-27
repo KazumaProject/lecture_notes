@@ -436,8 +436,6 @@ WORKDIR /opt
 RUN wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
 ```
 
-</details>
-
 ## Anacondaのインストール
 
 ```bash
@@ -479,6 +477,8 @@ CMD ["jupyter","lab","--ip=0.0.0.0","--allow-root","--LabApp.token=''"]
 ```bash
 docker run -p 8888:8888 -v ~/Documents/docker_projects/ds_python:/work --name my-lab <IMAGE_ID>
 ```
+
+</details>
 
 <details>
 
@@ -535,4 +535,3 @@ docker-compose down # stopしてrm
 ```
 
 </details>
-
