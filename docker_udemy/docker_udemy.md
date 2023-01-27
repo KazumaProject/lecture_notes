@@ -434,8 +434,97 @@ RUN apt-get update && apt-get install -y \
     vim
 WORKDIR /opt
 RUN wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh
-CMD ["jupyter lab"]
 ```
 
+</details>
+
+<details>
+<summary> Anacondaのインストール </summary>
+
+```bash
+echo $PATH #どこにpathが通っているか
+
+export PATH=/path/to/something:$PATH #pathの追加
+export PATH=/opt/anaconda3/bin:$PATH
+```
+
+```bash
+-x #optionの表示
+sh -x Anaconda3-2019.10-Linux-x86_64.sh
+```
+
+```bash
+sh Anaconda3-2019.10-Linux-x86_64.sh -b -p /opt/anaconda3 #受け答えをスキップしてdownloadするpathを指定する
+```
+
+## Dokcerfileの続きを書く
+
+```Dockerfile
+FROM ubuntu:latest
+RUN apt-get update && apt-get install -y \
+sudo \
+wget \
+vim
+WORKDIR /opt
+RUN wget https://repo.anaconda.com/archive/Anaconda3-2019.10-Linux-x86_64.sh && \
+    sh Anaconda3-2019.10-Linux-x86_64.sh -b -p /opt/anaconda3 && \
+    rm -f Anaconda3-2019.10-Linux-x86_64.sh
+ENV PATH /opt/anaconda3/bin:$PATH
+RUN pip install --upgrade pip
+WORKDIR /
+CMD ["jupyter","lab","--ip=0.0.0.0","--allow-root","--LabApp.token=''"]
+```
+
+## ファイルシステムの共有
+
+```bash
+docker run -p 8888:8888 -v ~/Documents/docker_projects/ds_python:/work --name my-lab <IMAGE_ID>
+```
+
+<details>
+
+<details>
+
+<summary> Section 13 応用編2-1 </summary>
+
+## rails用のDockerfileを作成
+
+```Dockerfile
+ [internal] load metadata for docker.io/library/ruby:2.5                              1.4s
+FROM ruby:2.5
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    nodejs \
+    postgresql-client \
+    yarn
+WORKDIR /product-register
+COPY Gemfile Gemfile.lock /product-register/
+RUN bundle install
+```
+
+## Docker compose
+- docker runコマンドが長くなる時
+- 複数のコンテナをまとめて起動するとき
+
+```bash
+docker run -v ~/Documents/docker_projects/product-register:/product-register -p3000:3000 -it <image> bash
+```
+
+```yml
+version '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/product-register'
+    tty: true
+    stdin_open:true
+```
 
 </details>
+
+
