@@ -561,8 +561,6 @@ default: &default
   user: postgres
   port: 5432
   password: <%= ENV.fetch("DATABASE_PASSWORD") %>
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 ```
 
