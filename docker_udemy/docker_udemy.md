@@ -481,6 +481,8 @@ CMD ["jupyter","lab","--ip=0.0.0.0","--allow-root","--LabApp.token=''"]
 docker run -p 8888:8888 -v ~/Documents/docker_projects/ds_python:/work --name my-lab <IMAGE_ID>
 ```
 
+</details>
+
 <details>
 
 <summary> Section 13 応用編2-1 </summary>
@@ -524,3 +526,5 @@ services:
 ```
 
 </details>
+
+
