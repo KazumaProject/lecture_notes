@@ -534,4 +534,36 @@ docker-compose up --build # buildしてrun
 docker-compose down # stopしてrm
 ```
 
+## RailsのSetup
+
+```bash
+rails new . --force --database=postgresql --skip-bundle
+```
+
+```bash
+rails s -b 0.0.0.0
+```
+
+Dockerfile内,CMDでbundleをinstallするのでcontainerをrebuildする
+
+```bash
+docker-compose down
+docker-compose up --build -d
+```
+
+## docker-compose.ymlにDB部分を追記する
+
+```yml
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  user: postgres
+  port: 5432
+  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+```
+- `depends_on:`で指定することで指定したserviceができたらcontainerをrunする
+- `links:`で指定したcontainerにアクセスできる
+
 </details>
