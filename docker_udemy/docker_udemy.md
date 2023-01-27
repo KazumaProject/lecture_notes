@@ -567,4 +567,33 @@ default: &default
 - `depends_on:`で指定することで指定したserviceができたらcontainerをrunする
 - `links:`で指定したcontainerにアクセスできる
 
+```yml
+version: '3'
+
+volumes:
+  data-base:
+
+services:
+  web:
+    build: .
+    ports:
+      - '3000:3000'
+    volumes:
+      - '.:/product-register'
+    environment:
+      - 'DATABASE_PASSWORD=postres'
+    tty: true
+    stdin_open: true
+    depends-on:
+      - db
+    links:
+      - db
+  
+  db:
+    image: postgres
+    volumes:
+      - 'db-data:/var/lib/postgresql/data'
+```
+
+
 </details>
