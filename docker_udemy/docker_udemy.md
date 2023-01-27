@@ -564,16 +564,6 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 ```
 
-```yml
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  host: db
-  user: postgres
-  port: 5432
-  password: <%= ENV.fetch("DATABASE_PASSWORD") %>
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-```
 - `depends_on:`で指定することで指定したserviceができたらcontainerをrunする
 - `links:`で指定したcontainerにアクセスできる
 
