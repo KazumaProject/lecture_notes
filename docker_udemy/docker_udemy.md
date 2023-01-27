@@ -530,6 +530,7 @@ services:
 ```bash
 docker-compose build # docker build <build context>
 docker-compose up # docker run <image>
+docker-compose up -d
 docker-compose ps # docker ps
 docker-compose exec <service> <command> # docker exec <container> <command>
 
