@@ -490,7 +490,6 @@ docker run -p 8888:8888 -v ~/Documents/docker_projects/ds_python:/work --name my
 ## rails用のDockerfileを作成
 
 ```Dockerfile
- [internal] load metadata for docker.io/library/ruby:2.5                              1.4s
 FROM ruby:2.5
 RUN apt-get update && apt-get install -y \
     build-essential \
