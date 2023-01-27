@@ -483,8 +483,6 @@ docker run -p 8888:8888 -v ~/Documents/docker_projects/ds_python:/work --name my
 
 <details>
 
-<details>
-
 <summary> Section 13 応用編2-1 </summary>
 
 ## rails用のDockerfileを作成
@@ -526,5 +524,3 @@ services:
 ```
 
 </details>
-
-
