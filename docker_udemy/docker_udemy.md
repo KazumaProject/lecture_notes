@@ -512,7 +512,7 @@ docker run -v ~/Documents/docker_projects/product-register:/product-register -p3
 ```
 
 ```yml
-version '3'
+version: '3'
 
 services:
   web:
@@ -522,9 +522,20 @@ services:
     volumes:
       - '.:/product-register'
     tty: true
-    stdin_open:true
+    stdin_open: true
+```
+
+## Docker composeを使ってコンテナを起動する
+
+```bash
+docker-compose build # docker build <build context>
+docker-compose up # docker run <image>
+docker-compose ps # docker ps
+docker-compose exec <service> <command> # docker exec <container> <command>
+
+docker-compose up --build # buildしてrun
+docker-compose down # stopしてrm
 ```
 
 </details>
-
 
