@@ -593,7 +593,10 @@ services:
     image: postgres
     volumes:
       - 'db-data:/var/lib/postgresql/data'
-```
+    environment:
+      - 'POSTGRES_USER=postgres'
+      - 'POSTGRES_PASSWORD=postgres'
 
+```
 
 </details>
