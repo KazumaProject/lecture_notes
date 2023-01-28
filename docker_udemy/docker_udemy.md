@@ -584,7 +584,7 @@ services:
       - 'DATABASE_PASSWORD=postres'
     tty: true
     stdin_open: true
-    depends-on:
+    depends_on:
       - db
     links:
       - db
