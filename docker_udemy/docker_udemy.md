@@ -571,7 +571,7 @@ default: &default
 version: '3'
 
 volumes:
-  data-base:
+  db-data:
 
 services:
   web:
