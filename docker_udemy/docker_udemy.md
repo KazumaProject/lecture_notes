@@ -581,7 +581,7 @@ services:
     volumes:
       - '.:/product-register'
     environment:
-      - 'DATABASE_PASSWORD=postres'
+      - 'DATABASE_PASSWORD=postgres'
     tty: true
     stdin_open: true
     depends_on:
@@ -597,6 +597,10 @@ services:
       - 'POSTGRES_USER=postgres'
       - 'POSTGRES_PASSWORD=postgres'
 
+```
+
+```bash
+docker volume
 ```
 
 </details>
